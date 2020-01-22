@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 // Components
 import Item from './ShoppingCartItem';
 
@@ -12,6 +11,7 @@ const ShoppingCart = props => {
 
 	return (
 		<div className="shopping-cart">
+			{console.log(props.cart)}
 			{props.cart.map(item => (
 				<Item key={item.id} {...item} />
 			))}
